@@ -1,0 +1,8 @@
+#include <stdio.h>
+void main() {
+	int num1 = 15, num2 = 3, result1, result2;
+	result1 = num1 << num2; 
+	result2 = num1 >> num2; 
+	printf("Bitwise Left shift result = %d\n", result1);
+	printf("Bitwise Right shift result = %d\n", result2);
+}
