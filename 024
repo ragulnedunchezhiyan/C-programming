@@ -1,0 +1,28 @@
+#include <stdio.h>
+void main() {
+	int external_maths_marks, external_science_marks, external_social_marks;
+	int internal_maths_marks, internal_science_marks, internal_social_marks;
+	int total_maths_marks, total_science_marks, total_social_marks;
+	int external_pass_mark = 26, total_pass_mark = 40;
+	int pass_count = 0;
+	printf("Enter maths, science and social internal marks (Max. marks: 30) : ");
+	// Read internal marks
+	scanf("%d%d%d", &internal_maths_marks,&internal_science_marks,&internal_social_marks);
+	
+	printf("Enter maths, science and social external marks (Max. marks: 70) : ");
+	scanf("%d%d%d",&external_maths_marks,&external_science_marks,&external_social_marks);
+	total_maths_marks = external_maths_marks + internal_maths_marks;
+	total_science_marks = external_science_marks + internal_science_marks;
+	total_social_marks = external_social_marks + internal_social_marks;
+	// Write the conditions using if statement to count the passed subjects
+	if(external_maths_marks >= 26 && total_maths_marks >= 40)
+	   pass_count+=1;
+	if(external_science_marks >= 26 && total_science_marks >= 40)
+		pass_count+=1;
+	if(external_social_marks >= 26 && total_social_marks >= 40)
+		pass_count+=1;
+	printf("External maths marks = %d Total maths marks = %d\n", external_maths_marks, total_maths_marks);
+	printf("External science marks = %d Total science marks = %d\n", external_science_marks, total_science_marks);
+	printf("External social marks = %d Total social marks = %d\n", external_social_marks, total_social_marks);
+	printf("Number of subjects passed = %d\n", pass_count);
+}
