@@ -1,0 +1,19 @@
+#include <stdio.h>
+void main() {
+	int maths_marks, computers_marks, physics_marks, chemistry_marks, english_marks, spanish_marks, total;
+	float percentage;
+	printf("Enter maths, computers, physics marks of a student : ");
+	// Read marks
+	scanf("%d %d %d",&maths_marks,&computers_marks,&physics_marks);
+	printf("Enter chemistry, english and spanish marks of a student : ");
+	// Read marks
+	scanf("%d %d %d",&chemistry_marks,&english_marks, &spanish_marks);
+	// Calculate total and percentage
+	total = maths_marks + computers_marks + physics_marks + chemistry_marks + english_marks + spanish_marks;
+	percentage = total/6.0;
+	if ( percentage >=60 ) { // Write the condition
+		printf("Student secured a first class with %5.2f%%\n", percentage);
+	} else{ // Write the else part
+		printf("Student did not secure a first class with %5.2f%%\n", percentage);
+	}
+}
